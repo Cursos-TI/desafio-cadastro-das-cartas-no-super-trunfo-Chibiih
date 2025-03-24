@@ -4,8 +4,6 @@
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
 
 // o que é necessário para montar a estrutura basica
 
@@ -34,7 +32,7 @@ int main() {
 
     printf("Inserção de dados para o jogo Super Trunfo \n \n");
 
-    printf("Insira o primeiro estado da carta 1 (letra entre a - h):");
+    printf("Insira o primeiro estado da carta 1 (Uma letra entre A - H):");
     scanf("%c", &estadoUm);
     printf("Estado um: %c \n", estadoUm);
     
@@ -63,13 +61,13 @@ int main() {
     printf("Pontos Turisticos 1: %d \n", pontosTuristicosUm);
 
 
-    printf("\n\nAgora vamos inserir os dados da Carta 2 \n\nInsira o primeiro estado da carta 2 (letra entre a - h): \n");
-    // não sei porque ele pula pro proximo....
+    printf("\n\nAgora vamos inserir os dados da Carta 2 \n\nInsira o primeiro estado da carta 2: ");
+    // não sei porque ele pula pro proximo então arrumei o erro dessa forma...
     scanf("%c", &estadoDois);
     scanf("%c", &estadoDois);
     printf("Estado dois: %c \n", estadoDois);
     
-    printf("Insira o código da carta 2 (Sendo a letra do estado seguida de um número de 01 a 04): ");
+    printf("Insira o código da carta 2: ");
     scanf("%s", &codigoCartaDois);
     printf("Código da carta 2: %s \n", codigoCartaDois);
     
@@ -100,19 +98,34 @@ int main() {
     printf("Estado: %c \n", estadoUm);
     printf("Codigo: %s \n", codigoCartaUm);
     printf("Cidade: %s \n", nomeCidadeUm);
-    printf("População: \n %d ", populacaoUm);
+    printf("População: %d \n", populacaoUm);
     printf("Área: %f km² \n", areaUm);
     printf("PIB: %f bilhões de reais \n", pibUm);
     printf("Número de pontos turisticos: %d \n", pontosTuristicosUm);
+    // Adicionando nivel aventureiro
+    float quociente = (float) populacaoUm / areaUm; 
+    printf("Densidade populacional 1: %.2f hab/km²\n", quociente);
+    float quociente2 = (float) pibUm / populacaoUm;
+    printf("PIB per capita 1: %.2f reais\n \n", quociente2);
 
     printf("Carta 2: \n");
     printf("Estado: %c \n", estadoDois);
     printf("Codigo: %s \n", codigoCartaDois);
     printf("Cidade: %s \n", nomeCidadeDois);
-    printf("População: \n %d ", populacaoDois);
+    printf("População: %d \n", populacaoDois);
     printf("Área: %f km² \n", areaDois);
     printf("PIB: %f bilhões de reais \n", pibDois);
     printf("Número de pontos turisticos: %d \n", pontosTuristicosDois);
+    //Nível aventureiro
+    float quociente3 = (float) populacaoDois / areaDois; 
+    printf("Densidade populacional 2: %.2f hab/km²\n", quociente3);
+    float quociente4 = (float) pibDois / populacaoDois;
+    printf("PIB per capita 2: %.2f reais\n", quociente4);
+
+    // Nível Aventureiro:  Calcular densidade populacional (hab/km²) e armazenar em uma variavel float
+    // Calcular PIB per capita (reais)
+    // Além de exibir as informações lidas do usuário (como no nível básico), seu programa também deve exibir a densidade populacional e o PIB per capita calculados para cada cidade. Formate os valores de ponto flutuante com duas casas decimais.
+
 
 
     return 0;
